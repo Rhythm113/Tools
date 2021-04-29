@@ -1,0 +1,26 @@
+//Collected by @Rhythm113
+//Ranges & Value Type..
+//Ranges
+JAVA_HEAP = 2
+C_HEAP = 1
+C_ALLOC = 4
+C_DATA = 8
+C_BSS = 10
+A_ANONYMOUS = 32
+JAVA = 65536
+STACK = 64
+ASHMEM = 524288
+V_VIDEO = 1048576
+B_BAD = 131072
+CODE_APP = 16384
+CODE_SYSTEM = 32768
+
+//Types
+BYTE = 1
+WORD = 2
+DWORD = 4
+XOR = 8
+FLOAT = 16
+QWORD = 32
+DOUBLE = 64
+AUTO = 127
