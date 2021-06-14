@@ -8,8 +8,8 @@
 local RHM = gg
 function HOME()
 menu = RHM.multiChoice({
-"⚙️Libbase Address > GG Value",
-"⚙️GG Value > Libbase Address ",
+"⚙️Offset > GG Value",
+"⚙️GG Value > Offset ",
 "📃Credits",
 "Exit",},nil," Libbase Converter By Rhythm113")
 if menu == nil then else
@@ -21,7 +21,7 @@ end
 LOL = -1
 end
 function LIB()
-main = RHM.prompt({"Lib Name : ","Offset Address :", "Type (int)"},nil,{"text","text","text"})
+main = RHM.prompt({"Target Name : ","Offset Address :", "Type (int)"},nil,{"text","text","text"})
 super = RHM.getRangesList(main[1])[1].start
 rsl = super + main[2]
 RHM.addListItems({
@@ -34,7 +34,7 @@ print('© Infinity Creators')
 os.exit()
 end
 function GG()
-maik = RHM.prompt({"Lib Name : ","Value Address  :"},nil,{"text","text",})
+maik = RHM.prompt({"Target Name : ","Value Address  :"},nil,{"text","text",})
 IC = RHM.getRangesList(maik[1])[1].start
 ic = maik[2] - IC
 local output = string.format("%x", ic)
