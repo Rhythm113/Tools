@@ -1,0 +1,51 @@
+Documentation :
+Available Functions :
+
+Tools :
+*check_game("package.name"); --Searches & Returns PID of the Package Name . Must be Set to a Variable.
+
+*check_pubg(); --For PUBG Devs . If You're Targeting Multiple PUBG versions use this instead of check_game("package.name"); 
+
+*start_deamon(); --Starts the Deamon.
+
+*modify_base_type_[VALUE_TYPE](get_lib_base(pid , "libname") + 0xADDRESS , VALUE_TO_BE_MODIFIED); --Example : modify_base_type_FLOAT(get_lib_base(get_pid, "libUE4.so") + 0x136D4F8, 0);
+                                                                                                                                    ^[VALUE_TYPE].   ^(PID). ^(Lib Name).  ^(Address). ^Value(To be Modified)
+Currently Supported VALUE_TYPE :
+1.DWORD
+2.QWORD
+3.FLOAT
+4.BYTE
+5.Double
+
+*get_libbase(pid , "lib_name"); --Gets The lib Base Address
+
+*print("Message"); --Prints Message.
+
+*close(deamon); --Closes Deamon. (Closes The current patch)
+
+*bypass_game(); --Tries to Bypass 3rd Party Detection
+
+*shell("Command"); --Execute The Shell from Code 
+----------------------------------------------------------------------------------------------------------------------
+
+Others : 
+
+*credit(); --Adds My Name in the Beginning. Give If you Want
+
+*owner_name("Your Name"); --To add The CPP owner Name add Your Name
+
+----------------------------------------------------------------------------------------------------------------------
+
+
+Please Don't Modify patch.h it may crash.
+You're Requested to give the Developer credit.
+
+Note : I'll add More Features in Future. So keep an Eye on the Channel @InfinityCreators1
+
+© Infinity Creators 
+
+Owner : Mahbub Anam Rhythm
+
+Facebook : fb.com/Rhythm.113
+
+Telegram : t.me/Rhythm113
