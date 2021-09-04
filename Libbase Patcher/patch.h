@@ -223,6 +223,9 @@ int check_pubg()
 				ipid = getPID("com.vng.pubgmobile");
 				if (ipid == 0)
 				{
+                                   ipid = getPID("com.pubg.imobile");
+		                       if (ipid == 0)
+		                   {
 					puts("PUBGM not running!");
 					exit(1);
 				}
