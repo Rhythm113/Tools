@@ -13,8 +13,10 @@ if ! pkg show libelf && ! pkg show ldd; then
 fi
 
 # Download mema3 and mem from URLs
-wget https://example.com/mema3 -O $PREFIX/bin/mema3
-wget https://example.com/mem -O $PREFIX/bin/mem
+wget https://raw.githubusercontent.com/Rhythm113/Tools/master/Memory%20Analyz3r/v0.2/mema3 -O $PREFIX/bin/mema3
+wget https://raw.githubusercontent.com/Rhythm113/Tools/master/Memory%20Analyz3r/v0.2/mem -O $PREFIX/bin/mem
+chmod +x $PREFIX/bin/mema3
+chmod +x $PREFIX/bin/mem
 
 # Verify downloaded files
 if [ ! -x $PREFIX/bin/mema3 ] || [ ! -x $PREFIX/bin/mem ]; then
@@ -23,4 +25,4 @@ if [ ! -x $PREFIX/bin/mema3 ] || [ ! -x $PREFIX/bin/mem ]; then
 fi
 
 # Echo success message
-echo "Installation successful"
+echo "Installation successful run `mem` to see help"

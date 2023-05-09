@@ -7,4 +7,4 @@ if [ ! -x "$PREFIX/bin/mema3" ]; then
 fi
 
 # Run mem with su
-su -c "$PREFIX/bin/mem $@" root
+su -c "$PREFIX/bin/mema3 $@" root
