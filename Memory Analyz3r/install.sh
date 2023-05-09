@@ -1,23 +1,20 @@
 #!/bin/bash
 
 # Update and upgrade packages
-#pkg update && pkg upgrade
+pkg update && pkg upgrade
 
-if ! command -v wget &> /dev/null
+if ! command -v wget
 then
     echo "wget is not installed on your system. Installing..."
-    pkg install wget
+    pkg install wget openssl
 else
     echo "wget is already installed on your system continue..."
 fi
 
 
-# Check if libelf and ldd are installed
-if ! pkg show libelf && ! pkg show ldd; then
-  echo "libelf and ldd not found installing.."
-  pkg install ldd libelf
-  exit 1
-fi
+#libelf and ldd 
+echo "installing needed dependencies.."
+pkg install libelf ldd 
 
 # Download mema3 and mem from URLs
 wget https://raw.githubusercontent.com/Rhythm113/Tools/main/Memory%20Analyz3r/v0.2/mema3 -O $PREFIX/bin/mema3
@@ -32,4 +29,4 @@ if [ ! -x $PREFIX/bin/mema3 ] || [ ! -x $PREFIX/bin/mem ]; then
 fi
 
 # Echo success message
-echo "Installation successful run mem to see to see help"
+echo "Installation successful run mem to see help"
