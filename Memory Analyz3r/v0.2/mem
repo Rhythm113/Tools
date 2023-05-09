@@ -6,5 +6,11 @@ if [ ! -x "$PREFIX/bin/mema3" ]; then
     exit 1
 fi
 
-# Run mem with su
-su -c "$PREFIX/bin/mema3 $@" root
+# Check if argument is provided
+if [ $# -eq 0 ]; then
+    su -c "$PREFIX/bin/mema3
+    exit 1
+fi
+
+# Forward the argument to su -c command
+su -c "$PREFIX/bin/mema3 $*" root
