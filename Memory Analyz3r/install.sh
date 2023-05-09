@@ -7,6 +7,7 @@ if ! command -v wget
 then
     echo "wget is not installed on your system. Installing..."
     pkg install wget openssl
+    continue
 else
     echo "wget is already installed on your system continue..."
 fi
