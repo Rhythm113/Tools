@@ -3,7 +3,14 @@
 # Update and upgrade packages
 #pkg update && pkg upgrade
 
-# Install libelf and ldd
+if ! command -v wget &> /dev/null
+then
+    echo "wget is not installed on your system. Installing..."
+    pkg install wget
+else
+    echo "wget is already installed on your system continue..."
+fi
+
 
 # Check if libelf and ldd are installed
 if ! pkg show libelf && ! pkg show ldd; then
