@@ -8,7 +8,7 @@ fi
 
 # Check if argument is provided
 if [ $# -eq 0 ]; then
-    su -c "$PREFIX/bin/mema3
+    su -c "$PREFIX/bin/mema3"
     exit 1
 fi
 

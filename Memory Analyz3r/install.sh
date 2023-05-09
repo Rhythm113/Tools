@@ -1,14 +1,14 @@
 #!/bin/bash
 
 # Update and upgrade packages
-pkg update && pkg upgrade
+#pkg update && pkg upgrade
 
 # Install libelf and ldd
-pkg install ldd libelf
 
 # Check if libelf and ldd are installed
 if ! pkg show libelf && ! pkg show ldd; then
-  echo "libelf and ldd not found"
+  echo "libelf and ldd not found installing.."
+  pkg install ldd libelf
   exit 1
 fi
 
@@ -25,4 +25,4 @@ if [ ! -x $PREFIX/bin/mema3 ] || [ ! -x $PREFIX/bin/mem ]; then
 fi
 
 # Echo success message
-echo "Installation successful run `mem` to see help"
+echo "Installation successful run mem to see to see help"
