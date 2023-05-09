@@ -24,3 +24,4 @@ fi
 
 # Echo success message
 echo "Installation successful"
+
