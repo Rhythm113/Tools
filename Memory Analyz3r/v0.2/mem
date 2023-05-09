@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Check if mem is installed
+if [ ! -x "$PREFIX/bin/mema3" ]; then
+    echo "Library not found in $PREFIX/bin. Exiting."
+    exit 1
+fi
+
+# Run mem with su
+su -c "$PREFIX/bin/mem $@" root
