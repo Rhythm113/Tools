@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Check if mem is installed
+if [ ! -x "/data/data/com.termux/files/usr/bin/mema3" ]; then
+    echo "Library not found in /data/data/com.termux/files/usr/bin. Exiting."
+    exit 1
+fi
+
+# Check if argument is provided
+if [ $# -eq 0 ]; then
+    su -c "/data/data/com.termux/files/usr/bin/mema3"
+    exit 1
+fi
+
+# Forward the argument to su -c command
+su -c "/data/data/com.termux/files/usr/bin/mema3 $*" root
