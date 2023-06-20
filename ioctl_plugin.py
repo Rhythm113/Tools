@@ -1,11 +1,10 @@
 #Date: 2023-06-20 09:41 PM
 #Simple IOCTL Analyzer helper by @Rhythm113
 
+
 import idaapi
 import idc
 import idautils
-
-
 
 def find_ioctl_functions():
     ioctl_functions = []
@@ -61,7 +60,10 @@ class FindIoctlPlugin(idaapi.plugin_t):
     author = "Rhythm113"
 
     def init(self):
-        return idaapi.PLUGIN_OK
+        if idaapi.IDA_SDK_VERSION >= 730:  # Check IDA SDK version for compatibility
+            return idaapi.PLUGIN_OK
+        else:
+            return idaapi.PLUGIN_SKIP
 
     def run(self, arg):
         ioctl_functions = find_ioctl_functions()
@@ -88,3 +90,4 @@ class FindIoctlPlugin(idaapi.plugin_t):
 
 def PLUGIN_ENTRY():
     return FindIoctlPlugin()
+    
